@@ -28,5 +28,6 @@ for (let i = 0; i < options.length; i++) {
         } else if (setupInfo[i].style.display === 'flex') {
             setupInfo[i].style.display = ""
         }
+
     })
 }

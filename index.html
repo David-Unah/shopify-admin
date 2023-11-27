@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
-    <header>
+    <header style="position: relative;">
         <nav>
             <div>
                 <img src="./images/shopifylogo.png" alt="shopify logo" class="web-logo">
@@ -28,6 +28,29 @@
                 <button class="mobile-profileName">DC</button>
             </div>
         </nav>
+        <div class="profileDropdown">
+                <div id="littleProfile"> <!-- this div should be display flex -->
+                    <p><span>DC</span> Davii Collections</p>
+                    <img src="./images/check.png" alt="tick icon">
+                </div>
+                <div id="allStoreBox">
+                    <img src="./images/storess.png" alt="store icon">
+                    <p>All stores</p>
+                </div>
+                <hr class="rule">
+                <ul>
+                    <li>Help Center</li>
+                    <li>ChangeLog</li>
+                    <li>Community forums</li>
+                    <li>Hire a Shopy Partner</li>
+                    <li>Keyboard Shorcuts</li>
+                    <hr class="rule">
+                    <li id="davidMicheal">David Micheal</li>
+                    <li id="davidEmail">davidmicheal@gmail.com</li>
+                    <li>Manage account</li>
+                    <li>Log out</li>
+                </ul>
+        </div>
     </header>
     <main>
         <div class="planSelectionBox">
@@ -93,16 +116,17 @@
                             <img src="./images/checkedstate.png" alt="checkbox icon">
                         </button>
                     </div>
-                    <h2>Customize you online store</h2>
+                    <h2>Add your first product</h2>
                 </div>
                 <div class="setupInfo-box">
                     <div class="setupInfo-innerbox">
-                        <p>Choose a theme and add your logo, colors and images to reflect your brand.</p>
+                        <p>Write a description, add photos, and set pricing for the products you plan to sell</p>
                         <a href="#">Learn more</a>
-                        <button>Customize Theme</button>
+                        <button>Add Product</button>
+                        <button>Import product</button>
                     </div>
                     <div class="setup-innerimageBox">
-                        <img src="./images/Illustrations.png" alt="change theme illustration">
+                        <img src="./images/firstproduct.png" alt="change theme illustration">
                     </div>
                 </div>
             </div>
@@ -118,16 +142,41 @@
                             <img src="./images/checkedstate.png" alt="checkbox icon">
                         </button>
                     </div>
-                    <h2>Customize you online store</h2>
+                    <h2>Add a custom domain</h2>
                 </div>
                 <div class="setupInfo-box">
                     <div class="setupInfo-innerbox">
-                        <p>Choose a theme and add your logo, colors and images to reflect your brand.</p>
+                        <p>Your current domain is 222219.myshopify.com but you can add a custom domain to help customer find you online store</p>
                         <a href="#">Learn more</a>
-                        <button>Customize Theme</button>
+                        <button>Add domain</button>
                     </div>
                     <div class="setup-innerimageBox">
-                        <img src="./images/Illustrations.png" alt="change theme illustration">
+                        <img src="./images/customDom.png" alt="change theme illustration">
+                    </div>
+                </div>
+            </div>
+            <div class="first-setup" tabindex="0">
+                <div class="firstCus-box options">
+                    <div class="checkboxContainer">
+                        <button class="checkbox1">
+                            <img src="./images/checkboxHover.png" alt="checkbox icon" class="checkBoxHover">
+                            <img src="./images/Component 14.png" alt="checkbox icon" class="checkBoxStatic">
+                            <img src="./images/activestate.png" alt="checkbox icon" class="checkBoxActive">
+                        </button>
+                        <button class="checkbox11">
+                            <img src="./images/cz.png" alt="checkbox icon">
+                        </button>
+                    </div>
+                    <h2>Name your store</h2>
+                </div>
+                <div class="setupInfo-box">
+                    <div class="setupInfo-innerbox">
+                        <p>Your temporary store name is currently Davii collections. The store name appears in your admin and your online store</p>
+                        <a href="#">Learn more</a>
+                        <button>Name store</button>
+                    </div>
+                    <div class="setup-innerimageBox">
+                        <img src="./images/nameyourStore.png" alt="change theme illustration">
                     </div>
                 </div>
             </div>
@@ -143,41 +192,16 @@
                             <img src="./images/checkedstate.png" alt="checkbox icon">
                         </button>
                     </div>
-                    <h2>Customize you online store</h2>
+                    <h2>Set up your payment provider</h2>
                 </div>
                 <div class="setupInfo-box">
                     <div class="setupInfo-innerbox">
-                        <p>Choose a theme and add your logo, colors and images to reflect your brand.</p>
+                        <p>Choose a payment provider to start accepting payments. You will need to create an account with the payment provider and set it up with your shopify store.</p>
                         <a href="#">Learn more</a>
-                        <button>Customize Theme</button>
+                        <button>Set up payment</button>
                     </div>
                     <div class="setup-innerimageBox">
-                        <img src="./images/Illustrations.png" alt="change theme illustration">
-                    </div>
-                </div>
-            </div>
-            <div class="first-setup" tabindex="0">
-                <div class="firstCus-box options">
-                    <div class="checkboxContainer">
-                        <button class="checkbox1">
-                            <img src="./images/checkboxHover.png" alt="checkbox icon" class="checkBoxHover">
-                            <img src="./images/Component 14.png" alt="checkbox icon" class="checkBoxStatic">
-                            <img src="./images/activestate.png" alt="checkbox icon" class="checkBoxActive">
-                        </button>
-                        <button class="checkbox11">
-                            <img src="./images/checkedstate.png" alt="checkbox icon">
-                        </button>
-                    </div>
-                    <h2>Customize you online store</h2>
-                </div>
-                <div class="setupInfo-box">
-                    <div class="setupInfo-innerbox">
-                        <p>Choose a theme and add your logo, colors and images to reflect your brand.</p>
-                        <a href="#">Learn more</a>
-                        <button>Customize Theme</button>
-                    </div>
-                    <div class="setup-innerimageBox">
-                        <img src="./images/Illustrations.png" alt="change theme illustration">
+                        <img src="./images/paymentsetup.png" alt="change theme illustration">
                     </div>
                 </div>
             </div>

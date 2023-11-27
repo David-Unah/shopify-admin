@@ -76,6 +76,111 @@ nav {
     display: none;
 }
 
+/* this is the profile dropdown css  */
+
+.profileDropdown {
+    position: absolute;
+    left: 74.3%;
+    height: 384px;
+    width: 320px;   
+    padding: 5px;
+    margin-top: 8px;
+    border-radius: 14px;
+    border: 1px solid var(--stroke-s-50, #DBDBDB);
+    background: var(--White, #FFF);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+}
+
+#littleProfile {
+    height: 20px;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    background: var(--states-hover, #F1F1F1);
+}
+
+
+#littleProfile > p {
+    color: var(--font-dark, #303030);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 140%; 
+}
+
+
+#littleProfile > p > span {
+    color: rgba(0, 0, 0, 0.40);
+    font-family: 'Inter', sans-serif;
+    font-size: 10.5px;
+    font-weight: 500;
+    line-height: 140%;
+    margin-right: 5px;
+    padding: 9.625px 5.875px 10.375px 6.125px;
+    border-radius: 5.25px;
+    background: #36FBA1;
+}
+
+
+#allStoreBox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 6px;
+}
+
+#allStoreBox > p {
+    color: var(--font-dark, #303030);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.profileDropdown > ul > li {
+    color: var(--font-dark, #303030);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 140%;
+    padding: 6px;
+    list-style-type: none;
+}
+
+
+#davidMicheal {
+    color: var(--font-dark, #303030);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 140%;
+    padding-bottom: 0px;
+}
+
+#davidEmail {
+    color: var(--grey-grey-100, var(--font-mid-2, #616161));
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    padding-top: 0px;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+.rule {
+    margin: 10px 0px;
+    border: 1px solid #E1E1E1;
+}
+
+
+
+
+
+
+
 main {
     width: 57%;
     height: 300px;
