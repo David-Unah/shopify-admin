@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -25,7 +26,7 @@ nav {
 
 .nav-input {
     width: 480px;
-    height: 19px;
+    height: 37px;
     padding: 8px;
     border-radius: 8px;
     border: 1px solid var(--stroke-s-200, #616161);
@@ -80,8 +81,8 @@ nav {
 
 .profileDropdown {
     position: absolute;
-    left: 74.3%;
-    height: 384px;
+    left: 75.4%;
+    height: 393px;
     width: 320px;   
     padding: 5px;
     margin-top: 8px;
@@ -91,9 +92,11 @@ nav {
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
 }
 
+#profileDrop {
+    display: none;
+}
+
 #littleProfile {
-    height: 20px;
-    width: 90%;
     margin: auto;
     padding: 10px;
     display: flex;
@@ -130,7 +133,7 @@ nav {
     align-items: center;
     gap: 8px;
     margin-top: 10px;
-    padding: 6px;
+    padding: 6px 7px;
 }
 
 #allStoreBox > p {
@@ -147,7 +150,7 @@ nav {
     font-size: 13px;
     font-weight: 400;
     line-height: 140%;
-    padding: 6px;
+    padding: 6px 10px;
     list-style-type: none;
 }
 
@@ -175,6 +178,55 @@ nav {
     border: 1px solid #E1E1E1;
 }
 
+.notifyDropdown {
+    position: absolute;
+    left: 70%;
+    margin-top: 8px;
+    width: 394px;
+    height: 120px;
+    padding: 16px;
+    border-radius: 14px;
+    border: 1px solid var(--stroke-s-50, #DBDBDB);
+    background: var(--White, #FFF);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+}
+
+#notifyDrop {
+    display: none;
+}
+
+.alertBoxFilter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#alerts-P {
+    color: var(--font-dark, #303030);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.alertBtn {
+    border: transparent;
+    background: transparent;
+}
+
+#alertsInfo {
+    padding: 16px;
+    margin-top: 10px;
+    background: var(--states-hover, #F1F1F1);
+}
+
+#alertsInfo > p {
+    color: var(--font-mid-2, #616161);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 140%; 
+}
 
 
 
@@ -224,6 +276,12 @@ main {
     line-height: 130%;
 }
 
+
+
+
+
+
+
 .web-cancelButton {
     border: none;
     background: transparent;
@@ -248,7 +306,6 @@ main {
 .setup-guide {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 24px;
 }
 
 .setup-guide > div > h2 {
@@ -295,10 +352,11 @@ main {
 
 .loading--Content {
     position: absolute;
-    width: 20%;
+    width: 0%;
     height: 4px;
     border-radius: 20px;
     background: #1A1A1A;
+    transition: width 0.5s ease-in-out;
 }
 
 
@@ -306,6 +364,14 @@ main {
     border: none;
     background: transparent;
 }
+
+
+
+#guideBox, #rollUp {
+    display: none;
+    margin-top: 20px;
+}
+
 
 
 .first-setup {
