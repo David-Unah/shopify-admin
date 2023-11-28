@@ -32,20 +32,19 @@ for (let i = 0; i < options.length; i++) {
     })
 }
 
-const profileNameBtn = document.getElementById('profileNameBtn')
+/* const profileNameBtn = document.getElementById('profileNameBtn') */
 const profileDropdown = document.getElementById('profileDrop')
 const notifyDrop = document.getElementById('notifyDrop')
 
-profileNameBtn.addEventListener('click', function() {
+function profileNameBtn() {
     if (profileDropdown.style.display === '') {
         profileDropdown.style.display = 'block'
         notifyDrop.style.display = ''
     } else {
         profileDropdown.style.display = ''
     }
+}
 
-
-})
 
 const notifyBtn = document.getElementById('notifybtn')
 

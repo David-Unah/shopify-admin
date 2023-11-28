@@ -33,6 +33,14 @@ nav {
     background: var(--grey-g-200, #303030);
 }
 
+.nav-input:hover {
+    border-radius: 8px;
+    border: 1px solid var(--stroke-s-100, #E1E1E1);
+    background: var(--grey-g-200, #303030);
+}
+
+
+
 .left-navButtons {
     display: flex;
     gap: 8px ;
@@ -46,6 +54,13 @@ nav {
     background: var(--grey-grey-200, #303030); 
     border: none;           
 }
+
+
+.notify:hover, .profileName:hover {
+    border-radius: 8px;
+    background: var(--font-mid-2, #616161);
+}
+
 
 .profileName {
     height: 32px;
@@ -82,7 +97,7 @@ nav {
 .profileDropdown {
     position: absolute;
     left: 75.4%;
-    height: 393px;
+    height: 398px;
     width: 320px;   
     padding: 5px;
     margin-top: 8px;
@@ -145,13 +160,19 @@ nav {
 }
 
 .profileDropdown > ul > li {
+    padding: 6px 10px;
+    list-style-type: none;
+}
+
+.profileDropdown > ul > li > a {
+    text-decoration: none;
     color: var(--font-dark, #303030);
     font-family: 'Inter', sans-serif;
     font-size: 13px;
     font-weight: 400;
     line-height: 140%;
-    padding: 6px 10px;
-    list-style-type: none;
+
+    
 }
 
 
@@ -276,6 +297,10 @@ main {
     line-height: 130%;
 }
 
+#sel-plan {
+    text-decoration: none;
+    color: var(--font-dark, #323232);
+}
 
 
 
@@ -479,7 +504,12 @@ main {
     text-decoration: none;
 }
 
-.setupInfo-innerbox > button {
+.doubleBtnBox {
+    display: flex;
+    gap: 16px;
+}
+
+.setupInfo-innerbox > button, .doubleBtnBox > button {
     display: block;
     color: var(--font-light, #F6F3F6);
     font-family: 'Inter', sans-serif;
@@ -494,6 +524,35 @@ main {
     border-left: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.20));
     background: #404040;
     box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333, 0px 2px 0px 0px #000;
+}
+
+.setupInfo-innerbox > button:active {
+    border-radius: 6px;
+    background: #2B2B2B;
+    box-shadow: 0px 0px 0px 1.5px #333, 0px 3px 0px 0px #000 inset;
+}
+
+.setupInfo-innerbox > button:focus {
+    border-radius: 6px;
+    border-top: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.20));
+    border-right: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.20));
+    border-left: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.20));
+    background: #404040;
+    box-shadow: 0px 0px 0px 5px #005BD3, 0px 0px 0px 3px #FFF, 0px 0px 0px 1.5px #333;
+}
+
+
+
+#importProduct {
+    color: var(--font-dark, #323232);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 130%;
+    border-radius: 6px;
+    background: transparent;
+    border: transparent;
+    box-shadow: none;
 }
 
 .setup-innerimageBox {
@@ -546,15 +605,14 @@ main {
 
     .searchBox {
         width: 90%;
-        margin-left: 3px;
     }
 
     .nav-input {
         width: 90%;
-        height: 14px;
+        height: 37px;
         padding: 8px;
         border-radius: 8px;
-    }
+    }   
 
     
 
@@ -603,7 +661,7 @@ main {
 
     .planSelectionBox {
         position: relative;
-        height: 104px;
+        height: 131px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;  
@@ -642,7 +700,6 @@ main {
 
 
     .mainSetupContainer {
-        height: 124px;
         border-radius: 0;
        
     }
@@ -653,8 +710,68 @@ main {
 
     .personalized {
         font-size: 14px;
-        margin: 9px 0 34px 0;
+        margin: 9px 0 16px 0;
     }
+
+
+    .firstCus-box > h2 {    
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+    .mobileUnviewedImg {
+        display: none;
+    }
+
+.first-setup {
+    border-radius: 10px;
+    background: #F3F3F3;
+    padding: 14px 8px;
+    margin-bottom: 12px;
+}
+
+
+
+.setupInfo-innerbox > a {
+    color: var(--states-focused, #005BD3);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.setupInfo-innerbox > button, .doubleBtnBox > button {
+    margin-top: 15px;
+}
+
+
+.profileDropdown {
+    left: 21.4%;  
+    padding: 0px;
+    z-index: 1;
+}
+
+#littleProfile {
+    width: 96%;
+    margin: 5px auto;
+    padding: 10px 5px;
+}
+
+.notifyDropdown {
+    left: 3.3%;
+    width: 93%;
+    margin: 12px auto;
+    height: 120px;
+    padding: 16px;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -676,5 +793,61 @@ main {
         height: 127px;
         
     }
+
+    .profileDropdown {
+        left: 12.4%;  
+        padding: 0px;
+        z-index: 1;
+    }
+
+    .notifyDropdown {
+        height: 105px;
+    }
+    
+
+    #alertsInfo {
+        padding: 7px;
+    }
+
+    #alertsInfo > p {
+        font-size: 12px;
+    }
+
+
+
+
+}
+
+
+@media only screen and (max-width: 320px) {
+
+    .plans-span {
+        display: inline;
+    }
+
+    .planSelectionBox {
+        height: 127px;
+        
+    }
+
+    .profileDropdown {
+        left: 0;  
+        padding: 0px;
+        z-index: 1;
+    }
+
+    .notifyDropdown {
+        height: 117px;
+    }
+    
+
+    #alertsInfo {
+        padding: 7px;
+    }
+
+    #alertsInfo > p {
+        font-size: 12px;
+    }
+
 
 }

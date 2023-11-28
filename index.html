@@ -10,25 +10,41 @@
     <header style="position: relative;">
         <nav>
             <div>
-                <img src="./images/shopifylogo.png" alt="shopify logo" class="web-logo">
-                <img src="./images/Shopify.com svg.png" alt="shopify mobile logo" class="mobile-logo">
+                <a href="shopify.com" class="web-logo"><img src="./images/shopifylogo.png" alt="shopify logo" ></a>
+                <a href="shopify.com" class="mobile-logo"> <img src="./images/Shopify.com svg.png" alt="shopify mobile logo" ></a>
             </div>
             <div class="searchBox">
                 <input type="text" name="Search" id="" class="nav-input" placeholder= "Search">
             </div>
             <div class="left-navButtons">
-                <button class="notify" id="notifybtn">
+                <button class="notify" 
+                        id="notifybtn"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        aria-controls="profileDrop"
+                        >
                     <img src="./images/notificationIcon.png" alt="notification bell">
                 </button>
-                <button class="profileName" id="profileNameBtn">
+                <button class="profileName" 
+                        onclick="profileNameBtn()" 
+                        id="profile-dropdown" 
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        aria-controls="notifyDrop"
+                >
                     Davii Collections
                     <span class="profileSpan">DC</span>
                 </button>
                 <!-- mobile view profile icon -->
-                <button class="mobile-profileName">DC</button>
+                <button class="mobile-profileName" onclick="profileNameBtn()">DC</button>
             </div>
         </nav>
-        <div class="profileDropdown" id="profileDrop">
+        <div class="profileDropdown" 
+             id="profileDrop"
+             aria-labelledby="profile-dropdown"
+             role="menu"
+             
+             >
                 <div id="littleProfile"> <!-- this div should be display flex -->
                     <p><span>DC</span> Davii Collections</p>
                     <img src="./images/check.png" alt="tick icon">  
@@ -39,19 +55,23 @@
                 </div>
                 <hr class="rule">
                 <ul>
-                    <li>Help Center</li>
-                    <li>ChangeLog</li>
-                    <li>Community forums</li>
-                    <li>Hire a Shopy Partner</li>
-                    <li>Keyboard Shorcuts</li>
+                    <li><a href="admin.shopify.com" role="menuitem">Help Center</a></li>
+                    <li><a href="admin.shopify.com" role="menuitem">ChangeLog</a></li>
+                    <li><a href="admin.shopify.com" role="menuitem">Community forums</a></li>
+                    <li><a href="admin.shopify.com" role="menuitem">Hire a Shopy Partner</a></li>
+                    <li><a href="admin.shopify.com" role="menuitem">Keyboard Shorcuts</a></li>
                     <hr class="rule">
-                    <li id="davidMicheal">David Micheal</li>
-                    <li id="davidEmail">davidmicheal@gmail.com</li>
-                    <li>Manage account</li>
-                    <li>Log out</li>
+                    <li id="davidMicheal"><a role="menuitem">David Micheal</a></li>
+                    <li id="davidEmail">davidmicheal@gmail.com</a></li>
+                    <li><a href="admin.shopify.com" role="menuitem">Manage account</a></li>
+                    <li><a href="admin.shopify.com" role="menuitem">Log out</a></li>
                 </ul>
         </div>
-        <div class="notifyDropdown" id="notifyDrop">
+        <div class="notifyDropdown" 
+             id="notifyDrop"
+             aria-labelledby="notifybtn"
+             role="alert"
+        >
             <div class="alertBoxFilter">
                 <div>
                     <p id="alerts-P">Alerts</p>
@@ -73,9 +93,9 @@
     <main>
         <div class="planSelectionBox">
             <h2>Extend your trials for $1/month for 3 months on select <span class="plans-span">plans.</span></h2>
-            <button class="mobile-cancelButton"><img src="./images/cancelplan.png" alt="cancel plan icon"></button>
+            <button class="mobile-cancelButton" onclick='cancelPlan()'><img src="./images/cancelplan.png" alt="cancel plan icon"></button>
             <div>
-                <button class="select--plan">Select a plan</button>
+                <button class="select--plan"><a href="shopify.com/pricing" id="sel-plan">Select a plan</a></button>
                 <button class="web-cancelButton" onclick='cancelPlan()' id="cancel"><img src="./images/cancelplan.png" alt="cancel plan icon"></button>
             </div>
         </div>
@@ -92,13 +112,21 @@
                     </div>
                 </div>
                 <div>
-                    <button onclick="displayGuide()" id='rollOut'>
+                    <button onclick="displayGuide()" 
+                            id='rollOut'
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            aria-controls="guideBox"
+                    >
                         <img src="./images/Icons.png" alt="drop down icon" >
                     </button>
                 </div>
             </div>
-            <div id="guideBox">
-                <div class="first-setup" tabindex="0">
+            <div id="guideBox"
+                aria-labelledby="rollOut"
+                role="checkbox"
+            >
+                <div class="first-setup" tabindex="0" role="checkbox">
                     <div class="firstCus-box options">
                         <div class="checkboxContainer" onclick="toggleCount('score1')">
                             <button class="checkbox1">
@@ -118,12 +146,12 @@
                             <a href="#">Learn more</a>
                             <button>Customize Theme</button>
                         </div>
-                        <div class="setup-innerimageBox">
-                            <img src="./images/Illustrations.png" alt="change theme illustration">
+                        <div class="setup-innerimageBox" >
+                            <img src="./images/Illustrations.png" alt="change theme illustration" class="mobileUnviewedImg">
                         </div>
                     </div>
                 </div>
-                <div class="first-setup" tabindex="0">
+                <div class="first-setup" tabindex="0" role="checkbox">
                     <div class="firstCus-box options">
                         <div class="checkboxContainer" onclick="toggleCount('score2')" >
                             <button class="checkbox1">
@@ -141,15 +169,17 @@
                         <div class="setupInfo-innerbox">
                             <p>Write a description, add photos, and set pricing for the products you plan to sell</p>
                             <a href="#">Learn more</a>
-                            <button>Add Product</button>
-                            <button>Import product</button>
+                            <div class="doubleBtnBox">
+                                <button>Add Product</button>
+                                <button id="importProduct">Import product</button>
+                            </div>
                         </div>
-                        <div class="setup-innerimageBox">
-                            <img src="./images/firstproduct.png" alt="change theme illustration">
+                        <div class="setup-innerimageBox" >
+                            <img src="./images/firstproduct.png" alt="change theme illustration" class="mobileUnviewedImg" >
                         </div>
                     </div>
                 </div>
-                <div class="first-setup" tabindex="0">
+                <div class="first-setup" tabindex="0" role="checkbox">
                     <div class="firstCus-box options">
                         <div class="checkboxContainer" onclick="toggleCount('score3')" >
                             <button class="checkbox1">
@@ -169,12 +199,12 @@
                             <a href="#">Learn more</a>
                             <button>Add domain</button>
                         </div>
-                        <div class="setup-innerimageBox">
-                            <img src="./images/customDom.png" alt="change theme illustration">
+                        <div class="setup-innerimageBox" >
+                            <img src="./images/customDom.png" alt="change theme illustration" class="mobileUnviewedImg">
                         </div>
                     </div>
                 </div>
-                <div class="first-setup" tabindex="0">
+                <div class="first-setup" tabindex="0" role="checkbox">
                     <div class="firstCus-box options">
                         <div class="checkboxContainer" onclick="toggleCount('score4')" >
                             <button class="checkbox1">
@@ -194,12 +224,12 @@
                             <a href="#">Learn more</a>
                             <button>Name store</button>
                         </div>
-                        <div class="setup-innerimageBox">
-                            <img src="./images/nameyourStore.png" alt="change theme illustration">
+                        <div class="setup-innerimageBox" >
+                            <img src="./images/nameyourStore.png" alt="change theme illustration" class="mobileUnviewedImg">
                         </div>
                     </div>
                 </div>
-                <div class="first-setup" tabindex="0">
+                <div class="first-setup" tabindex="0" role="checkbox">
                     <div class="firstCus-box options">
                         <div class="checkboxContainer" onclick="toggleCount('score5')" >
                             <button class="checkbox1">
@@ -219,8 +249,8 @@
                             <a href="#">Learn more</a>
                             <button>Set up payment</button>
                         </div>
-                        <div class="setup-innerimageBox">
-                            <img src="./images/paymentsetup.png" alt="change theme illustration">
+                        <div class="setup-innerimageBox" >
+                            <img src="./images/paymentsetup.png" alt="change theme illustration" class="mobileUnviewedImg">
                         </div>
                     </div>
                 </div>
