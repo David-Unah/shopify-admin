@@ -18,7 +18,7 @@ for (let i = 0; i < icon.length; i++) {
 }
 
 
-const options = document.getElementsByClassName('first-setup')
+const options = document.getElementsByClassName('options')
 /*
 for (let i = 0; i < options.length; i++) {
     options[i].addEventListener('click', function() {
