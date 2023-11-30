@@ -18,8 +18,8 @@ for (let i = 0; i < icon.length; i++) {
 }
 
 
-const options = document.getElementsByClassName('options')
-
+const options = document.getElementsByClassName('first-setup')
+/*
 for (let i = 0; i < options.length; i++) {
     options[i].addEventListener('click', function() {
         const setupInfo = document.getElementsByClassName('setupInfo-box')
@@ -30,31 +30,38 @@ for (let i = 0; i < options.length; i++) {
         }
 
     })
-}
+} */
 
-/* const profileNameBtn = document.getElementById('profileNameBtn') */
+const profileNameDropBtn = document.getElementById('profile-dropdown')
 const profileDropdown = document.getElementById('profileDrop')
 const notifyDrop = document.getElementById('notifyDrop')
+const notifyBtn = document.getElementById('notifybtn')
 
 function profileNameBtn() {
     if (profileDropdown.style.display === '') {
         profileDropdown.style.display = 'block'
         notifyDrop.style.display = ''
+        profileNameDropBtn.style.background = '#616161'
+        notifyBtn.style.background = ''
     } else {
         profileDropdown.style.display = ''
+        profileNameDropBtn.style.background = ''
     }
 }
 
 
-const notifyBtn = document.getElementById('notifybtn')
+
 
 
 notifyBtn.addEventListener('click', function() {
     if (notifyDrop.style.display === '') {
         notifyDrop.style.display = 'block' 
         profileDropdown.style.display = ''
+        this.style.background = '#616161'
+        profileNameDropBtn.style.background = ''
     } else {
         notifyDrop.style.display = ''
+        this.style.background = ''
     }
 })
 
@@ -115,3 +122,80 @@ function totalChecked(item) {
     }
 }
 
+const setUpOne = document.getElementById('setupInfo-one')
+const setUpTwo = document.getElementById('setupInfo-two')
+const setUpThree = document.getElementById('setupInfo-three')
+const setUpFour = document.getElementById('setupInfo-four')
+const setUpFive = document.getElementById('setupInfo-five')
+
+for (let i = 0; i < options.length; i++) {
+    options[0].addEventListener('click', function() {
+        if ( setUpOne.style.display === "") {
+            setUpOne.style.display = "flex"
+        } else if (setUpOne.style.display === "flex") {
+            setUpOne.style.display = ""
+        }
+        
+        setUpTwo.style.display = ""
+        setUpTwo.style.display = ""
+        setUpTwo.style.display = ""
+        setUpTwo.style.display = ""
+
+    })
+
+    options[1].addEventListener('click', function() {
+        if ( setUpTwo.style.display === "") {
+            setUpTwo.style.display = "flex"
+        } else if (setUpTwo.style.display === "flex") {
+            setUpTwo.style.display = ""
+        }
+        
+        setUpOne.style.display = ""
+        setUpThree.style.display = ""
+        setUpFour.style.display = ""
+        setUpFive.style.display = ""
+
+    })
+
+    options[2].addEventListener('click', function() {
+        if ( setUpThree.style.display === "") {
+            setUpThree.style.display = "flex"
+        } else if (setUpThree.style.display === "flex") {
+            setUpThree.style.display = ""
+        }
+        
+        setUpOne.style.display = ""
+        setUpTwo.style.display = ""
+        setUpFour.style.display = ""
+        setUpFive.style.display = ""
+
+    })
+
+    options[3].addEventListener('click', function() {
+        if ( setUpFour.style.display === "") {
+            setUpFour.style.display = "flex"
+        } else if (setUpFour.style.display === "flex") {
+            setUpFour.style.display = ""
+        }
+        
+        setUpOne.style.display = ""
+        setUpTwo.style.display = ""
+        setUpThree.style.display = ""
+        setUpFive.style.display = ""
+
+    })
+
+    options[4].addEventListener('click', function() {
+        if ( setUpFive.style.display === "") {
+            setUpFive.style.display = "flex"
+        } else if (setUpFive.style.display === "flex") {
+            setUpFive.style.display = ""
+        }
+        
+        setUpOne.style.display = ""
+        setUpTwo.style.display = ""
+        setUpThree.style.display = ""
+        setUpFour.style.display = ""
+
+    })
+}   
