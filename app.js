@@ -127,9 +127,9 @@ for (let i = 0; i < options.length; i++) {
         }
         
         setUpTwo.style.display = ""
-        setUpTwo.style.display = ""
-        setUpTwo.style.display = ""
-        setUpTwo.style.display = ""
+        setUpThree.style.display = ""
+        setUpFour.style.display = ""
+        setUpFive.style.display = ""
 
     })
 
