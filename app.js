@@ -18,19 +18,8 @@ for (let i = 0; i < icon.length; i++) {
 }
 
 
-const options = document.getElementsByClassName('options')
-/*
-for (let i = 0; i < options.length; i++) {
-    options[i].addEventListener('click', function() {
-        const setupInfo = document.getElementsByClassName('setupInfo-box')
-        if (setupInfo[i].style.display === "") {
-            setupInfo[i].style.display = 'flex'
-        } else if (setupInfo[i].style.display === 'flex') {
-            setupInfo[i].style.display = ""
-        }
 
-    })
-} */
+
 
 const profileNameDropBtn = document.getElementById('profile-dropdown')
 const profileDropdown = document.getElementById('profileDrop')
@@ -122,6 +111,7 @@ function totalChecked(item) {
     }
 }
 
+const options = document.getElementsByClassName('options')
 const setUpOne = document.getElementById('setupInfo-one')
 const setUpTwo = document.getElementById('setupInfo-two')
 const setUpThree = document.getElementById('setupInfo-three')

@@ -22,15 +22,27 @@ nav {
     display: none;
 }
 
-
+.magGlass {
+    position: relative;
+    left: 31px;
+    top: 6px;   
+}
 
 .nav-input {
     width: 480px;
     height: 37px;
-    padding: 8px;
+    padding: 8px 8px 8px 40px;
     border-radius: 8px;
     border: 1px solid var(--stroke-s-200, #616161);
     background: var(--grey-g-200, #303030);
+}
+
+.nav-input::placeholder {
+    color: var(--grey-g-100, #B5B5B5);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 140%;
 }
 
 .nav-input:hover {
@@ -52,7 +64,8 @@ nav {
     height: 32px;
     border-radius: 8px;
     background: var(--grey-grey-200, #303030); 
-    border: none;           
+    border: none;  
+    cursor: pointer;         
 }
 
 
@@ -73,6 +86,7 @@ nav {
     font-weight: 500;
     line-height: 130%;
     border: none;
+    cursor: pointer;
 }
 
 .profileSpan {
@@ -97,7 +111,7 @@ nav {
 .profileDropdown {
     position: absolute;
     left: 75.4%;
-    height: 398px;
+    height: 404px;
     width: 320px;   
     padding: 5px;
     margin-top: 8px;
@@ -607,10 +621,16 @@ main {
         width: 90%;
     }
 
+    .magGlass {
+        position: absolute;
+        left: 62px;
+        top: 19px;   
+    }
+
     .nav-input {
         width: 90%;
         height: 37px;
-        padding: 8px;
+        padding: 8px 8px 8px 37px;
         border-radius: 8px;
     }   
 
@@ -795,7 +815,7 @@ main {
     }
 
     .profileDropdown {
-        left: 12.4%;  
+        left: 11.4%;  
         padding: 0px;
         z-index: 1;
     }
